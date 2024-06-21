@@ -1,17 +1,23 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
 
+class Person {
+    public:
+        string firstName;
+        string lastName;
+        int age;
+
+        void fullname() {
+            cout << this->firstName << ' ' << Person::lastName;
+        }
+};
 
 int main() {
-	
-	int myVariable =0;
-	
 
-	
-	myVariable=15;
-	
-    myVariable=20;
-	
-  cout << myVariable;
-  return 0;
+Person person;
+person.firstName = “Duc Anh";
+person.lastName = “Nguyen";
+person.fullname(); // s? in ra màn hình là “nguyen duc anh"
+	return 0;
 }
+

@@ -126,7 +126,7 @@ struct Student{
 	int StudentID;
 	string StudentName;
 	
-}
+};
 
 int main() {
 	
