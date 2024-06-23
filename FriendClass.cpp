@@ -1,0 +1,33 @@
+#include <iostream>  
+using namespace std;  
+
+
+
+class mayLaptop {  
+   private :
+   int chieudai;
+   public:  
+        void setChieudai(int cd)      {  
+            this->chieudai = cd;  
+        }
+  friend class mayVitinh;          
+};  
+
+class mayVitinh {  
+  public:  
+    void HienThi(mayLaptop mayAcer) {  
+        cout << "Chieu dai cua may laptop from Friend la: "<< mayAcer.chieudai;  
+    }  
+};  
+
+int main() {  
+    mayLaptop mayAcer;  
+    mayAcer.setChieudai(120);
+    
+    mayVitinh mayvitinh;  
+    mayvitinh.HienThi(mayAcer);  
+    
+    
+    return 0;  
+}
+
